@@ -1,0 +1,32 @@
+<style>
+  .blixo-type {
+    padding: 8px;
+  }
+  .blixo-type-active {
+    background: #efefef;
+  }
+</style>
+<div>
+  <div class="blixo-type blixo-type-subscription blixo-type-active">
+    <input
+      class="blixo-type-input"
+      name="purchase-type"
+      type="radio"
+      value="subscription"
+      id="subscription"
+      checked
+    />
+    <label for="subscription">Subscription</label>
+    <div>Description</div>
+  </div>
+  <div class="blixo-type blixo-type-onetime">
+    <input
+      class="blixo-type-input"
+      name="purchase-type"
+      type="radio"
+      value="onetime"
+      id="onetime"
+    />
+    <label for="onetime">One-time purchse</label>
+  </div>
+</div>

@@ -19,3 +19,5 @@ const blixo = Blixo();
 //   console.log('ADD ITEMS success', res);
 // })
 
+export default Blixo;
+
