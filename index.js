@@ -2,16 +2,20 @@ import Blixo from "./lib/blixo";
 
 console.log('Blixo SDK');
 
-const blixo = Blixo();
+const blixo = Blixo({ publicKey: 'if4YqCdSx9@LlseziQF7VmD98Un9b'});
 
-// blixo.items.list().then(res => {
+// blixo.invoices.list({
+//   page: 1,
+//   perPage: 10,
+//   paymentStatus: ['OUTSTANDING'],
+// }).then(res => {
 //   const { response, errors } = res;
 
 //   if (errors) {
 //     return;
 //   }
 
-//   console.log('LIST ITEMS success', response);
+//   console.log('LIST ITEMS success', response.data.length);
 // })
 
 
