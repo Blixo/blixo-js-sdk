@@ -9,30 +9,35 @@ This repository contains the JS client library for the Blixo API.
 
 We can install the package via our Git URL.
 
-`yarn add https://github.com/Blixo/blixo-js-sdk.git`
+```
+yarn add https://github.com/Blixo/blixo-js-sdk.git
+```
 
 ## Usage
 
-1. Inport blixo from Blixo;
-2. Init blixo instance with apiKey (from Blixo's settings on Blixo system)
-3. Access model acc methods to get data
+First, you must instantiate a new Blixo Client
 
-
-### Example
 ```
 import Blixo from "blixo-js-sdk";
 
-const blixo = Blixo({ apiKey: 'API Key'});
+const blixo = Blixo({ apiKey: '<YOUR_BLIXO_API_KEY>'});
 
+```
+
+To obtain API Key, you can go to `Blixo > Settings > API Keys` to generate a new one for your own.
+
+Then, API calls can be made like this:
+
+```
 blixo.invoices.list({
   page: 1,
   perPage: 10,
 }).then(res => {
   const { response, errors } = res;
-})
+});
 ```
 
-List model
+## List of supported APIs
 - addons
 - customers
 - invoices
