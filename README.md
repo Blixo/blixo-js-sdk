@@ -38,8 +38,65 @@ blixo.invoices.list({
 ```
 
 ## List of supported APIs
-- addons
 - customers
-- invoices
+  - list customers
+    ```
+      blixo.customers.list({
+        page: 1,
+        perPage: 10,
+      }).then(res => {
+        const { response, errors } = res;
+      });
+    ```
+  - getCustomerByShopifyCustomerId
+    ```
+    blixo.customers.getCustomerByShopifyCustomerId(shopifyCustomerId).then(res => {
+      const { response, errors } = res;
+    });
+    ```
 - items
+  - list items
+    ```
+    blixo.items.list({
+      page: 1,
+      perPage: 10,
+    }).then(res => {
+      const { response, errors } = res;
+    });
+    ```
+  - getItemByProductId
+    ```
+    blixo.items.getItemByProductId(productId).then(res => {
+      const { response, errors } = res;
+    });
+    ```
+- invoices
+  - list invoices
+    ```
+    blixo.invoices.list({
+      page: 1,
+      perPage: 10,
+    }).then(res => {
+      const { response, errors } = res;
+    });
+    ```
 - subscriptions
+  - list subscriptions
+    ```
+      blixo.subscriptions.list({
+        page: 1,
+        perPage: 10,
+      }).then(res => {
+        const { response, errors } = res;
+      });
+    ```
+- addons
+  - list addons
+    ```
+      blixo.addons.list({
+        page: 1,
+        perPage: 10,
+      }).then(res => {
+        const { response, errors } = res;
+      });
+    ```
