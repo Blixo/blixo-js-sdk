@@ -20,7 +20,7 @@ First, you must instantiate a new Blixo Client
 ```
 import Blixo from "blixo-js-sdk";
 
-const blixo = Blixo({ apiKey: '<YOUR_BLIXO_API_KEY>'});
+const blixo = Blixo({ apiKey: '<YOUR_BLIXO_API_KEY>', mode: '<local|dev|production>'});
 
 ```
 
