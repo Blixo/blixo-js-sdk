@@ -34,7 +34,7 @@ const blixo = Blixo({
 Then, API calls can be made like this:
 
 ```
-blixo.invoices.list({
+blixo.customers.list({
   page: 1,
   perPage: 10,
 }).then(res => {
@@ -43,8 +43,8 @@ blixo.invoices.list({
 ```
 
 ## List of supported APIs
-- customers
-  - list customers
+- **customers**
+  - get list of customers
     ```
       blixo.customers.list({
         page: 1,
@@ -53,14 +53,25 @@ blixo.invoices.list({
         const { response, errors } = res;
       });
     ```
-  - getCustomerByShopifyCustomerId
+  - get customer by Blixo's customer ID
     ```
-    blixo.customers.getCustomerByShopifyCustomerId(shopifyCustomerId).then(res => {
+    blixo.customers.get({
+      customerId: '<blixo-customer-id>'
+    }).then(res => {
       const { response, errors } = res;
     });
     ```
-- items
-  - list items
+  - get customer by Shopify's customer ID
+    ```
+    blixo.customers.get({
+      customerId: '<shopify-customer-id>',
+      provider: 'shopify'
+    }).then(res => {
+      const { response, errors } = res;
+    });
+    ```
+- **items / products**
+  - get list of items/products
     ```
     blixo.items.list({
       page: 1,
@@ -69,24 +80,25 @@ blixo.invoices.list({
       const { response, errors } = res;
     });
     ```
-  - getItemByProductId
+  - get item/product by Blixo's item ID
     ```
-    blixo.items.getItemByProductId(productId).then(res => {
-      const { response, errors } = res;
-    });
-    ```
-- invoices
-  - list invoices
-    ```
-    blixo.invoices.list({
-      page: 1,
-      perPage: 10,
+    blixo.items.get({
+      itemId: '<blixo-item-id>',
     }).then(res => {
       const { response, errors } = res;
     });
     ```
-- subscriptions
-  - list subscriptions
+  - get item/product by Shopify's product ID
+    ```
+    blixo.items.get({
+      itemId: '<shopify-product-id>',
+      provider: 'shopify'
+    }).then(res => {
+      const { response, errors } = res;
+    });
+    ```
+- **subscriptions**
+  - get list of subscriptions
     ```
       blixo.subscriptions.list({
         page: 1,
@@ -95,8 +107,19 @@ blixo.invoices.list({
         const { response, errors } = res;
       });
     ```
-- addons
-  - list addons
+  - get list of subscriptions by given Shopify's customer ID
+    ```
+      blixo.subscriptions.list({
+        page: 1,
+        perPage: 10,
+        provider: 'shopify',
+        customerId: '<shopify-customer-id>'
+      }).then(res => {
+        const { response, errors } = res;
+      });
+    ```
+- **addons**
+  - get list of addons
     ```
       blixo.addons.list({
         page: 1,
@@ -104,4 +127,14 @@ blixo.invoices.list({
       }).then(res => {
         const { response, errors } = res;
       });
+    ```
+- **invoices**
+  - get list of invoices
+    ```
+    blixo.invoices.list({
+      page: 1,
+      perPage: 10,
+    }).then(res => {
+      const { response, errors } = res;
+    });
     ```
