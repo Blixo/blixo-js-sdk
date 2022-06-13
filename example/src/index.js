@@ -1,6 +1,9 @@
 import Blixo from '../../lib/blixo';
 
-const blixo = Blixo({ apiKey: '<YOUR_BLIXO_API_KEY>' });
+const blixo = Blixo({ 
+  apiKey: '',
+  mode: ''
+});
 
 blixo.invoices.list({
   page: 1,

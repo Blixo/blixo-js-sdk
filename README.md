@@ -20,11 +20,16 @@ First, you must instantiate a new Blixo Client
 ```
 import Blixo from "blixo-js-sdk";
 
-const blixo = Blixo({ apiKey: '<YOUR_BLIXO_API_KEY>', mode: '<local|dev|production>'});
+const blixo = Blixo({ 
+  apiKey: '<YOUR_BLIXO_API_KEY>', 
+  mode: '<ENVIRONMENT>'
+});
 
 ```
 
-To obtain API Key, you can go to `Blixo > Settings > API Keys` to generate a new one for your own.
+* **apiKey**: you can go to `Blixo > Settings > API Keys` to generate a new API Key for your own.
+
+* **mode**: we're supporting a few modes such as `local`, `development`, `staging`, and `production`. They're corresponding with our server environment. You can choose one of these options to use.
 
 Then, API calls can be made like this:
 
