@@ -138,3 +138,20 @@ blixo.customers.list({
       const { response, errors } = res;
     });
     ```
+
+## Subscription widget
+To create subscription widget:
+
+- Add a dom element with id: `subscription-widget`
+    ```
+    <div id="subscription-widget"></div>
+    ```
+
+    > Note: The `div` only work if it is put inside `shopify product form` and using native shpify `Add To Cart` button
+
+- Init widget using the following code with provided productId
+    ```
+      blixo.widgets.subscription.initialize({
+        productId
+      })
+    ```
