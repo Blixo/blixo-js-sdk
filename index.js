@@ -1,4 +1,4 @@
-import Blixo from "./lib/blixo";
+import Blixo from './lib/blixo';
 
 export default Blixo;
 
