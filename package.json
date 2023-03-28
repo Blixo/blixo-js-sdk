@@ -1,6 +1,6 @@
 {
   "name": "blixo-js-sdk",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Blixo SDK",
   "main": "index.js",
   "scripts": {
