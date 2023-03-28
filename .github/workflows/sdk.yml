@@ -1,0 +1,15 @@
+name: deploy sdk
+
+on:
+  push:
+    branches:
+      - "master"
+jobs:
+  deploy_sdk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
